@@ -9,9 +9,7 @@ import customtkinter
 import zxcvbn
 from Cryptodome.Cipher import AES
 from Cryptodome.Random import get_random_bytes
-from tkinter import filedialog
-from customtkinter.windows.widgets.font import Font
-
+from customtkinter import filedialog
 
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
@@ -27,7 +25,7 @@ class PasswordManagerApp(customtkinter.CTk):
 
         # configure grid layout
         self.grid_columnconfigure(1, weight=1)
-        self.grid_columnconfigure((2, 3), weight=0)
+        self.grid_columnconfigure((3, 2), weight=0)
         self.grid_rowconfigure((0, 1, 2), weight=1)
 
         # Main Buttons for Checking and Generating
@@ -86,14 +84,15 @@ class PasswordManagerApp(customtkinter.CTk):
         # Textbox with set value
         self.textbox_3 = customtkinter.CTkTextbox(self.button_frame1, width=200)
         self.textbox_3.grid(row=3, column=1, padx=5, pady=10, sticky="N")
-        self.textbox_3.insert("0.0", "Note:\n\n" + "The system will only check for these parameters: \n\n" +
-                              "Minimum password length: 8   characters \n" + "Maximum password length: 64 characters \n" +
-                              "Password must contain one    special character, such as ""[!@#$%^&*(),_.?\":{}|<>] \n" +
-                              "Password must have at least one upper-case and lower-case letter \n\n" +
-                              "Password strength goes from 0 - 4; 0 being the weakest, 4 being the strongest"
-                              "If password strength is <=2, its recommend that the password needs to change, "
-                              "if its >=3,"
-                              + " the password can be useable.")
+        self.textbox_3.insert("0.0", "Note:\n\n" + "The system will only check for these parameters: \n\n" 
+                              "1. Password should be at least 8 characters long.\n" 
+                              "2. Password should contain at  least one uppercase letter.\n" 
+                              "3. Password should contain at  least one lowercase letter.\n" 
+                              "4. Password should contain at  least one digit.\n" 
+                              "5. Password should contain at  least one special character.\n\n" 
+                              "This will also check the strength of your password: \n\n" 
+                              "If password strength is <=2, its recommend that the password needs to change, " 
+                              "if its >=3, the password can be useable.")
 
         # Radio Buttons for selecting what to save
         self.radiobutton_frame = customtkinter.CTkFrame(self)
@@ -237,7 +236,7 @@ class PasswordManagerApp(customtkinter.CTk):
         # Write decrypted data to file
         with open(os.path.splitext(filename)[0] + ".txt", 'a') as f_out:
             f_out.write(
-                "Username: {0}\n"  "Pass: {1}\n"    "Site: {2}\n\n".format(
+                'Username: {0}\n'  'Pass: {1}'  'Site: {2}\n\n'.format(
                     str(decrypted_data['Username']).strip("'[]'"),
                     decrypted_data['Pass'],
                     decrypted_data['Site']))
