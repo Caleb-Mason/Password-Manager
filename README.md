@@ -29,7 +29,7 @@ Cyan Rectangle - Input boxes for you to input username and website (optional)
 Grey Rectangle - The "Save and Encrypt" when pressed will pop up a file explorer window to save your password, username, and password that will be encrypted. 
                  The "Decrypt" Button will decrypt the file that is encrypted and decrypts it and converts it to a txt file.
                  
-*Note: there will be a .key file that goes along with the save, ingore it, you will need that file for the decryption, ***DO NOT DELETE***.
-*Note: IT WILL ONLY SAVE ONE PASSWORD AT A TIME, IT DOES NOT STACK, ***DO NOT DELETE THE TXT FILE***.
+Note: there will be a .key file that goes along with the save, ingore it, you will need that file for the decryption, ***DO NOT DELETE***.
+Note: IT WILL ONLY SAVE ONE PASSWORD AT A TIME, IT DOES NOT STACK, ***DO NOT DELETE THE TXT FILE***.
 
 
