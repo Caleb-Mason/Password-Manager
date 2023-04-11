@@ -4,7 +4,7 @@
 
 Welcome to the Password Manager App! This application is designed to save passwords and other account info and encrypts and decrypts the info.
 
-### Installation
+## Installation
 
 To install the Password Manager App, follow these steps:
 
@@ -12,9 +12,9 @@ To install the Password Manager App, follow these steps:
 2. Extract the files to a folder on your computer.
 3. Double-click the PasswordManagerApp.exe file to launch the application.
 
-#### How to Use
+## How to Use
 
-[https://imgur.com/GBIsNRV](http://i.imgur.com/GBIsNRV.jpg)
+[imgur.com](http://i.imgur.com/GBIsNRV.jpg)
 
 Red Rectangle - when you press the "Generate Random Password" button, it will generate a 12 length password with mixed characters and will be displayed on the right in                   the empty textbox.
 
