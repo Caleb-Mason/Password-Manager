@@ -1,6 +1,6 @@
-[center][size=6][b]Password Manager App[/b][/size][/center]
+# Password Manager App
 
-[size=5][b]Introduction[/b][/size]
+## Introduction
 
 Welcome to the Password Manager App! This application is designed to save passwords and other account info and encrypts and decrypts the info.
 
