@@ -30,6 +30,7 @@ Grey Rectangle - The "Save and Encrypt" when pressed will pop up a file explorer
                  The "Decrypt" Button will decrypt the file that is encrypted and decrypts it and converts it to a txt file.
                  
 Note: there will be a .key file that goes along with the save, ingore it, you will need that file for the decryption, ***DO NOT DELETE***.
+
 Note: IT WILL ONLY SAVE ONE PASSWORD AT A TIME, IT DOES NOT STACK, ***DO NOT DELETE THE TXT FILE***.
 
 
