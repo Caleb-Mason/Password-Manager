@@ -14,7 +14,7 @@ To install the Password Manager App, follow these steps:
 
 ## How to Use
 
-[imgur.com](http://i.imgur.com/GBIsNRV.jpg)
+![imgur.com](http://i.imgur.com/GBIsNRV.jpg)
 
 Red Rectangle - when you press the "Generate Random Password" button, it will generate a 12 length password with mixed characters and will be displayed on the right in                   the empty textbox.
 
