@@ -10,6 +10,8 @@ import zxcvbn
 from Cryptodome.Cipher import AES
 from Cryptodome.Random import get_random_bytes
 from customtkinter import filedialog
+import sys
+from typing_extensions import Final
 
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
@@ -117,9 +119,18 @@ class PasswordManagerApp(customtkinter.CTk):
         self.textbox_1.insert("0.0", password)
 
     def password_gen_withwords(self):
-        file = open("wordlist.10000.txt", "r")
-        words = file.read().splitlines()
-        random_words = random.sample(words, 3)
+        if sys.platform == "win32":
+            MEIPASS: Final[str] = getattr(sys, "_MEIPASS", "")
+        else:
+            MEIPASS: Final[str] = getattr(sys, "_MEIPASS", "/")
+
+        if MEIPASS:
+            file_path = os.path.join(MEIPASS, "wordlist.10000.txt")
+        else:
+            file_path = "wordlist.10000.txt"
+        with open(file_path, "r") as file:
+            words = file.read().splitlines()
+            random_words = random.sample(words, 3)
         self.textbox_2.delete("0.0", "64.0")
         self.textbox_2.insert("0.0", random_words)
 
